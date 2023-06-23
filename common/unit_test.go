@@ -18,7 +18,7 @@ func TestConnectingDatabase(t *testing.T) {
 	_, err := os.Stat("./../gorm.db")
 	asserts.NoError(err, "Db should exist")
 	asserts.NoError(db.DB().Ping(), "Db should be able to ping")
-
+	assert.False(true)
 	// Test get a connecting from connection pools
 	connection := GetDB()
 	asserts.NoError(connection.DB().Ping(), "Db should be able to ping")
